@@ -1,5 +1,8 @@
 package com.handy.lib.mm;
 
+import com.handy.lib.mm.listener.MythicMobDeathEventHideListener;
+import com.handy.lib.mm.listener.MythicMobDeathEventLowListener;
+import com.handy.lib.mm.listener.MythicMobDeathEventMiddleListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
@@ -22,24 +25,35 @@ public class MythicMobUtil {
     private static final MythicMobUtil INSTANCE = new MythicMobUtil();
 
     /**
-     * 初始化并判断当前mm版本
+     * 获取实例
      *
      * @return this
      */
     public static MythicMobUtil getInstance() {
-        Plugin plugin = Bukkit.getPluginManager().getPlugin("MythicMobs");
-        if (plugin != null) {
-            int firstPluginVersion = VersionUtil.getFirstPluginVersion(plugin);
-            int twoPluginVersion = VersionUtil.getTwoPluginVersion(plugin);
+        return INSTANCE;
+    }
+
+    /**
+     * 初始化功能
+     *
+     * @param plugin 插件
+     */
+    public static void init(Plugin plugin) {
+        Plugin mythicMobs = Bukkit.getPluginManager().getPlugin("MythicMobs");
+        if (mythicMobs != null && MM_VERSION == null) {
+            int firstPluginVersion = VersionUtil.getFirstPluginVersion(mythicMobs);
+            int twoPluginVersion = VersionUtil.getTwoPluginVersion(mythicMobs);
             if (firstPluginVersion >= 5) {
                 MM_VERSION = MythicMobVersionEnum.HIDE;
+                plugin.getServer().getPluginManager().registerEvents(new MythicMobDeathEventHideListener(), plugin);
             } else if (twoPluginVersion < 7) {
                 MM_VERSION = MythicMobVersionEnum.LOW;
+                plugin.getServer().getPluginManager().registerEvents(new MythicMobDeathEventLowListener(), plugin);
             } else {
                 MM_VERSION = MythicMobVersionEnum.MIDDLE;
+                plugin.getServer().getPluginManager().registerEvents(new MythicMobDeathEventMiddleListener(), plugin);
             }
         }
-        return INSTANCE;
     }
 
     /**

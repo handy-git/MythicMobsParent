@@ -7,7 +7,7 @@
     <parent>
         <artifactId>MythicMobsParent</artifactId>
         <groupId>com.handy.lib.mm</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <artifactId>MythicMobsLib</artifactId>
@@ -17,20 +17,18 @@
         <dependency>
             <groupId>com.handy.lib.mm</groupId>
             <artifactId>MythicMobsHide</artifactId>
-            <version>1.0.0</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.handy.lib.mm</groupId>
             <artifactId>MythicMobsMiddle</artifactId>
-            <version>1.0.0</version>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.handy.lib.mm</groupId>
             <artifactId>MythicMobsLow</artifactId>
-            <version>1.0.0</version>
+            <version>${parent.version}</version>
         </dependency>
     </dependencies>
-
-
 
 </project>

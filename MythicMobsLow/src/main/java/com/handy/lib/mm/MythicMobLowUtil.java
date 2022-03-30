@@ -27,7 +27,7 @@ public class MythicMobLowUtil {
      *
      * @return this
      */
-    public static MythicMobLowUtil getInstance() {
+    protected static MythicMobLowUtil getInstance() {
         return INSTANCE;
     }
 
@@ -37,7 +37,7 @@ public class MythicMobLowUtil {
      * @param pageNum 页数
      * @return key: displayName value: internalName
      */
-    public Map<String, String> getMythicMobMap(Integer pageNum) {
+    protected Map<String, String> getMythicMobMap(Integer pageNum) {
         Map<String, String> map = new LinkedHashMap<>();
         List<MythicMob> mythicMobs = this.getMythicMobs(pageNum);
         if (mythicMobs != null && !mythicMobs.isEmpty()) {
@@ -54,7 +54,7 @@ public class MythicMobLowUtil {
      * @param pageNum 页数
      * @return mm怪物
      */
-    private List<MythicMob> getMythicMobs(Integer pageNum) {
+    protected List<MythicMob> getMythicMobs(Integer pageNum) {
         Collection<MythicMob> mythicMobs = MythicMobs.inst().getMobManager().getMobTypes();
         Stream<MythicMob> limit = mythicMobs.stream().skip(pageNum * 45L).limit(45);
         return limit.collect(Collectors.toList());
@@ -66,7 +66,7 @@ public class MythicMobLowUtil {
      * @param internalName 内部名称
      * @return 怪物名称
      */
-    public String getMythicMobName(String internalName) {
+    protected String getMythicMobName(String internalName) {
         MythicMob mythicMob = MythicMobs.inst().getMobManager().getMythicMob(internalName);
         if (mythicMob == null) {
             return internalName;
@@ -83,7 +83,7 @@ public class MythicMobLowUtil {
      *
      * @return 怪物数量
      */
-    public Integer getMythicMobsCount() {
+    protected Integer getMythicMobsCount() {
         Collection<MythicMob> mythicMobs = MythicMobs.inst().getMobManager().getMobTypes();
         return mythicMobs.size();
     }

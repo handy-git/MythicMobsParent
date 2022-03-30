@@ -3,8 +3,6 @@ package com.handy.lib.mm;
 import io.lumine.mythic.api.mobs.MythicMob;
 import io.lumine.mythic.api.skills.placeholders.PlaceholderString;
 import io.lumine.mythic.bukkit.MythicBukkit;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.Plugin;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -17,7 +15,6 @@ import java.util.stream.Stream;
  * @since 1.0.0
  */
 public class MythicMobHighUtil {
-    private MythicBukkit mythicMobs = null;
 
     private MythicMobHighUtil() {
     }
@@ -29,19 +26,8 @@ public class MythicMobHighUtil {
      *
      * @return this
      */
-    public static MythicMobHighUtil getInstance() {
+    protected static MythicMobHighUtil getInstance() {
         return INSTANCE;
-    }
-
-    /**
-     * 加载MythicMobs
-     */
-    private void loadMythicMobs() {
-        Plugin plugin = Bukkit.getPluginManager().getPlugin("MythicMobs");
-        if (plugin == null) {
-            return;
-        }
-        this.mythicMobs = (MythicBukkit) plugin;
     }
 
     /**

@@ -27,7 +27,7 @@ public class MythicMobMiddleUtil {
      *
      * @return this
      */
-    public static MythicMobMiddleUtil getInstance() {
+    protected static MythicMobMiddleUtil getInstance() {
         return INSTANCE;
     }
 

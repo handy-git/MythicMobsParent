@@ -6,7 +6,7 @@
 
     <groupId>com.handy.lib.mm</groupId>
     <artifactId>MythicMobsParent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <description>MythicMobs全版本兼容性lib</description>
 
@@ -15,6 +15,7 @@
         <module>MythicMobsMiddle</module>
         <module>MythicMobsHide</module>
         <module>MythicMobsLib</module>
+        <module>MythicMobsLibEvent</module>
     </modules>
 
     <properties>
