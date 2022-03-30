@@ -26,4 +26,4 @@ MythicMobsLib
 ##### MythicMob已兼容方法
 [javadoc](https://server-ct.gitee.io/mythicmobsparent/com/handy/lib/mm/MythicMobUtil.html)
 ##### MythicMob已兼事件兼容
-MythicMobDeathEvent 请监听 MythicMobLibDeathEvent
+MythicMobDeathEvent 请监听 [MythicMobLibDeathEvent](https://server-ct.gitee.io/mythicmobsparent/com/handy/lib/mm/event/MythicMobLibDeathEvent.html)
