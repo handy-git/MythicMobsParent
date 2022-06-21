@@ -6,8 +6,8 @@
 
     <parent>
         <artifactId>MythicMobsParent</artifactId>
-        <groupId>com.handy.lib.mm</groupId>
-        <version>1.0.1</version>
+        <groupId>cn.handyplus.lib.mm</groupId>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>MythicMobsLow</artifactId>
@@ -21,7 +21,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.handy.lib.mm</groupId>
+            <groupId>cn.handyplus.lib.mm</groupId>
             <artifactId>MythicMobsLibEvent</artifactId>
             <version>${parent.version}</version>
         </dependency>

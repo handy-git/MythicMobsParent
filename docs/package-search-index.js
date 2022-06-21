@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"com.handy.lib.mm"},{"l":"com.handy.lib.mm.event"},{"l":"com.handy.lib.mm.listener"},{"l":"所有程序包","u":"allpackages-index.html"}];updateSearchResults();
+packageSearchIndex = [{"l":"cn.handyplus.lib.mm"},{"l":"cn.handyplus.lib.mm.event"},{"l":"cn.handyplus.lib.mm.listener"},{"l":"所有程序包","u":"allpackages-index.html"}];updateSearchResults();
