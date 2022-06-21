@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>MythicMobsLib</artifactId>
-    <description>MythicMobsLib最终打包的框架</description>
+    <description>MythicMobs全版本兼容性lib</description>
 
     <dependencies>
         <dependency>
