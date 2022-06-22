@@ -20,6 +20,7 @@ maven 打包父层级parent
 MythicMobsLib
 
 #### 使用方式(本jar已经发布到maven中央仓库)
+[![Maven Central](https://img.shields.io/maven-central/v/cn.handyplus.lib.mm/MythicMobsLib.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22cn.handyplus.lib.mm%22%20AND%20a:%22MythicMobsLib%22)
 步骤 1.将MythicMobsLib添加到您的构建文件
 
 maven方式
