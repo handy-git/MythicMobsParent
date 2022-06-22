@@ -19,11 +19,27 @@ maven 打包父层级parent
 #### 成品
 MythicMobsLib
 
-#### 使用方式
-1. 引入MythicMobsLib依赖
+#### 使用方式(本jar已经发布到maven中央仓库)
+步骤 1.将MythicMobsLib添加到您的构建文件
+
+maven方式
+```
+<dependency>
+  <groupId>cn.handyplus.lib.mm</groupId>
+  <artifactId>MythicMobsLib</artifactId>
+  <version>1.0.2</version>
+</dependency>
+```
+Gradle方式
+```
+implementation 'cn.handyplus.lib.mm:MythicMobsLib:1.0.2'
+```
+
 2. 调用初始化方法 MythicMobUtil.init(Plugin)
 3. 之后调用 MythicMobUtil.getInstance()获取唯一实例来调用方法
+
 ##### MythicMob已兼容方法
 [javadoc](https://server-ct.gitee.io/mythicmobsparent/com/handy/lib/mm/MythicMobUtil.html)
+
 ##### MythicMob已兼事件兼容
 MythicMobDeathEvent 请监听 [MythicMobLibDeathEvent](https://server-ct.gitee.io/mythicmobsparent/com/handy/lib/mm/event/MythicMobLibDeathEvent.html)
